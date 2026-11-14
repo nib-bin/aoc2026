@@ -1,9 +1,9 @@
 extern crate helpf;
 
-use crate::y2026::day00::NAME;
+use crate::y2026::day00::DAY;
 
 pub fn a() -> i64 {
-    return a_testable(format!("./input/{}/{}.txt", NAME, "a"))
+    return a_testable(format!("./input/{}/{}.txt", DAY, "a"))
 }
 
 fn a_testable(input_path: String) -> i64 {
@@ -15,12 +15,12 @@ fn a_testable(input_path: String) -> i64 {
 
                     println!("{:?}", l);
                 },
-                Err(e) => println!("Err reading line in {}::{}: {:?}", NAME, "a", e),
+                Err(e) => println!("Err reading line in {}::{}: {:?}", DAY, "a", e),
             }
         }
 
     } else {
-        println!("cant open file in {}::{}", NAME, "a");
+        println!("cant open file in {}::{}", DAY, "a");
     };
 
     println!("day00::a");
@@ -35,7 +35,7 @@ mod tests {
 
     #[test]
     fn test() {
-        assert_eq!(a_testable(format!("./input/{}/{}test.txt", NAME, "a")), 0);
+        assert_eq!(a_testable(format!("./input/{}/{}test.txt", DAY, "a")), 0);
 
     }
 }

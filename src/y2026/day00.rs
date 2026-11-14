@@ -3,4 +3,4 @@ mod b;
 pub use a::a;
 pub use b::b;
 
-static NAME: &str = "day00";
+static DAY: &str = "day00";
