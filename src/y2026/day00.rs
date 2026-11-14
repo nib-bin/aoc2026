@@ -38,12 +38,10 @@ mod test {
     #[test]
     fn a() {
         assert_eq!(a::a_testable(&format!("./input/{}test.txt", DAY)), 0);
-
     }
 
     #[test]
     fn b() {
         assert_eq!(b::b_testable(&format!("./input/{}test.txt", DAY)), 0);
-
     }
 }
