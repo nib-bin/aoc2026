@@ -5,15 +5,13 @@ mod b;
 
 static DAY: &str = "day00";
 
-pub fn a() {
-    a::a_testable(format!("./input/{}.txt", DAY));
+pub fn solve() {
+    let input_path = format!("./input/{}.txt", DAY);
+    a::a_testable(&input_path);
+    b::b_testable(&input_path);
 }
 
-pub fn b() {
-    b::b_testable(format!("./input/{}.txt", DAY));
-}
-
-fn parse_input(input_path: String) -> i64 {
+fn parse_input(input_path: &String) -> i64 {
     if let Ok(lines) = helpf::read_lines(input_path) {
         for line in lines {
             match line {
@@ -36,16 +34,16 @@ fn parse_input(input_path: String) -> i64 {
 #[cfg(test)]
 mod test {
     use super::*;
-
+    
     #[test]
     fn a() {
-        assert_eq!(a::a_testable(format!("./input/{}test.txt", DAY)), 0);
+        assert_eq!(a::a_testable(&format!("./input/{}test.txt", DAY)), 0);
 
     }
 
     #[test]
     fn b() {
-        assert_eq!(b::b_testable(format!("./input/{}test.txt", DAY)), 0);
+        assert_eq!(b::b_testable(&format!("./input/{}test.txt", DAY)), 0);
 
     }
 }
